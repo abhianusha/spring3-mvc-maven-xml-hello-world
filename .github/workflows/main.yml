@@ -15,7 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - name: compile javacode
+        run: java HelloWorld.Java
+      - name: run javacode
+        run: Java HelloWorld
       - name: Run a one-line script
         run: mvn package
 
